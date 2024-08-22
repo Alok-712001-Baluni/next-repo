@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export async function getUsers() {
+async function getUsers() {
   const res = await fetch("https://jsonplaceholder.org/users", {
     next: { revalidate: 3600 },
   });
@@ -25,7 +25,7 @@ export default async function Home() {
 
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1 className='text-5xl'>Home Page</h1>
       <Link href='/search'>Go to Search Page</Link>
 
       <ul>
