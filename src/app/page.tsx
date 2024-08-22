@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-async function getUsers() {
+export async function getUsers() {
   const res = await fetch("https://jsonplaceholder.org/users", {
     next: { revalidate: 3600 },
   });
